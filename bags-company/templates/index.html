@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bags Company</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Bags Galore</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#featured">Featured Bag</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="home">
+                <h2>Welcome to Our Store</h2>
+                <img src="{{ url_for('static', filename='images/store.jpg') }}" alt="Store Image" class="store-image">
+            </section>
+
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Welcome to Bags Galore, your one-stop destination for high-quality and stylish bags. Whether you're looking for a casual backpack or a chic handbag, we've got something for everyone.</p>
+            </section>
+
+            <section id="collections">
+                <h2>Collections</h2>
+                <div class="bag-collection fade-in">
+                    <img src="{{ url_for('static', filename='images/bag1.jpg') }}" alt="Bag 1">
+                    <p class="price">$99.99</p>
+                </div>
+                <div class="bag-collection slide-in">
+                    <img src="{{ url_for('static', filename='images/bag2.jpg') }}" alt="Bag 2">
+                    <p class="price">$149.99</p>
+                </div>
+                <div class="bag-collection zoom-in">
+                    <img src="{{ url_for('static', filename='images/bag3.jpg') }}" alt="Bag 3">
+                    <p class="price">$199.99</p>
+                </div>
+            </section>
+
+            <section id="featured">
+                <h2>Featured Bag</h2>
+                <div class="featured-bag">
+                    <img src="{{ url_for('static', filename='images/featured_bag.jpg') }}" alt="Featured Bag">
+                    <div class="bag-info">
+                        <h3>Exclusive Handcrafted Leather Bag</h3>
+                        <p>This exquisite bag is handcrafted from the finest leather. Perfect for any occasion, it combines style and functionality in one elegant package.</p>
+                        <p class="price">$299.99</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <h2>Testimonials</h2>
+                <div class="testimonial">
+                    <p>"I love my new bag from Bags Galore! It's stylish, durable, and perfect for everyday use." - Jane Doe</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Excellent customer service and high-quality products. Highly recommend Bags Galore!" - John Smith</p>
+                </div>
+            </section>
+
+            <section id="gallery">
+                <h2>Gallery</h2>
+                <div class="gallery">
+                    <img src="{{ url_for('static', filename='images/bag4.jpg') }}" alt="Bag 4">
+                    <img src="{{ url_for('static', filename='images/bag5.jpg') }}" alt="Bag 5">
+                    <img src="{{ url_for('static', filename='images/bag6.jpg') }}" alt="Bag 6">
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form action="{{ url_for('submit_form') }}" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="bag_model">Preferred Bag Model:</label>
+                    <input type="text" id="bag_model" name="bag_model" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bags Galore. All rights reserved.</p>
+            <p>Contact:<a href="kartikeydheer@gmai.com">kartikeydheer@gmail.com</a></p>
+            <p>Number: 7567114807</p>
+        </div>
+    </footer>
+
+    <script>
+        // Clock script
+        function updateTime() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            clock.textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Quotes script
+        const quotes = [
+            "The best way to predict the future is to create it.",
+            "Success is not the key to happiness. Happiness is the key to success.",
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Believe you can and you're halfway there."
+        ];
+        let quoteIndex = 0;
+        function updateQuote() {
+            const quoteElement = document.getElementById('quote');
+            quoteElement.textContent = quotes[quoteIndex];
+            quoteIndex = (quoteIndex + 1) % quotes.length;
+        }
+        setInterval(updateQuote, 5000);
+        updateQuote();
+    </script>
+</body>
+</html>

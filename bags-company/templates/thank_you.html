@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Bags Galore</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#models">Car Models</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Thank You!</h2>
+            <p>Here are the latest submissions:</p>
+            
+            <ul>
+                {% for submission in submissions %}
+                <li>{{ submission[1] }} - {{ submission[2] }} - {{ submission[3] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+
+    <footer >
+        <div class="container">
+            <p>&copy; 2024 Bags Galore. All rights reserved.</p>
+            <p>Contact:<a href="kartikeydheer@gmai.com">kartikeydheer@gmail.com</a></p>
+            <p>Number: 7567114807</p>
+        </div>
+    </footer>
+</body>
+</html>
