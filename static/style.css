@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: flex-end;
+    margin-bottom: 0%;
+}
+
+header {
+    background-color: #000000; /* Green header background */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #000000; /* Dark border at the bottom */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size */
+    animation: colorChange 5s infinite;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.store-image {
+    max-width: 1000px; /* Adjust the max width as needed */
+    height: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bag-collection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bag-collection img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.3s;
+}
+
+.bag-collection img:hover {
+    transform: scale(1.1);
+}
+
+.bag-collection .price {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.featured-bag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-bag img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.featured-bag .bag-info {
+    width: 50%;
+    padding: 20px;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 50%;
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #000000; /* Green button background */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #000000; /* Darker green on hover */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    justify-content: flex-end;
+    bottom: 0;
+    margin-bottom: 0%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+.slide-in {
+    animation: slideIn 2s;
+}
+
+.zoom-in {
+    animation: zoomIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes colorChange {
+    0% { color: #fff; }
+    25% { color: #ffcc00; }
+    50% { color: #00ccff; }
+    75% { color: #ff66cc; }
+    100% { color: #fff; }
+}
+
+#time {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#quote {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
